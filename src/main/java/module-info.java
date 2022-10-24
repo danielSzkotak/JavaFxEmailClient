@@ -8,6 +8,8 @@ module com.example.javafxemailclient {
     exports com.example.javafxemailclient;
     exports com.example.javafxemailclient.view;
     opens com.example.javafxemailclient.view to javafx.fxml;
+    exports com.example.javafxemailclient.controller;
+    opens com.example.javafxemailclient.controller to javafx.fxml;
 
 
 }

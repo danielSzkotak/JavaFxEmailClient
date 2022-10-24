@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.control.Button?>
 
-<AnchorPane prefHeight="370.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/18.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxemailclient.view.LoginWindowController">
+<AnchorPane prefHeight="370.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/18.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxemailclient.controller.LoginWindowController">
    <children>
       <Button layoutX="165.0" layoutY="239.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="57.0" prefWidth="126.0" text="Login" />
       <Label layoutX="112.0" layoutY="137.0" prefHeight="17.0" prefWidth="53.0" text="Email" />
