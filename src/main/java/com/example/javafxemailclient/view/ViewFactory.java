@@ -7,6 +7,7 @@ public class ViewFactory {
     private EmailManager emailManager;
 
     public ViewFactory(EmailManager emailManager) {
+
         this.emailManager = emailManager;
     }
 

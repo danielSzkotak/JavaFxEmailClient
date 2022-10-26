@@ -23,6 +23,7 @@ public class LoginWindowController extends BaseController {
 
     @FXML
     void loginButtonAction() {
+
         System.out.println("clicked!!!");
     }
 
