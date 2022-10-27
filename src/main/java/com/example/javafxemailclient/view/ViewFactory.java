@@ -26,7 +26,7 @@ public class ViewFactory {
 
 
     //View options handling
-    private ColorTheme colorTheme = ColorTheme.DEFAULT;
+    private ColorTheme colorTheme = ColorTheme.DARK;
 
     public ColorTheme getColorTheme() {
         return colorTheme;

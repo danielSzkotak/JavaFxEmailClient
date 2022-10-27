@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95ea60f1-e4ba-40c9-8499-45244b1bcfd4" name="Changes" comment="setup Scene Builder">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/javafxemailclient/view/css/default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/javafxemailclient/view/css/fontBig.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/javafxemailclient/view/css/fontMedium.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/javafxemailclient/view/css/fontSmall.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/javafxemailclient/view/css/themeDark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/javafxemailclient/view/css/themeDefault.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/javafxemailclient/view/css/themeLight.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/controller/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/controller/MainWindowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/controller/OptionsWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/controller/OptionsWindowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/view/ColorTheme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/view/ColorTheme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/view/FontSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/view/FontSize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/Launcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/view/ViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/view/ViewFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/javafxemailclient/view/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/javafxemailclient/view/MainWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/javafxemailclient/view/OptionsWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/javafxemailclient/view/OptionsWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/javafxemailclient/view/css/themeDark.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/javafxemailclient/view/css/themeDark.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
