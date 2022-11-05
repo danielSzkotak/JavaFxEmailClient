@@ -32,18 +32,22 @@ public class LoginWindowController extends BaseController {
         if (fieldsAreValid()){
             EmailAccount emailAccount = new EmailAccount(emailField.getText(), passwordField.getText());
             LoginService loginService = new LoginService(emailAccount, emailManager);
-            EmailLoginResult emailLoginResult = loginService.login();
+            loginService.start();
+            loginService.setOnSucceeded(event -> {
 
-            switch (emailLoginResult){
-                case SUCCESS:
-                    System.out.println("login succesfull !!!" + emailAccount);
-                    return;
-            }
+                EmailLoginResult emailLoginResult = loginService.getValue();
+
+                switch (emailLoginResult){
+                    case SUCCESS:
+                        System.out.println("login succesfull !!!" + emailAccount);
+                        viewFactory.showMainWindow();
+                        Stage stage = (Stage) errorLabel.getScene().getWindow();
+                        viewFactory.closeStage(stage);
+                        return;
+                }
+            });
+
         }
-
-//        viewFactory.showMainWindow();
-//        Stage stage = (Stage) errorLabel.getScene().getWindow();
-//        viewFactory.closeStage(stage);
 
     }
 
