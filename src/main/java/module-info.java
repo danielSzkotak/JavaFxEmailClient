@@ -12,6 +12,7 @@ module com.example.javafxemailclient {
     opens com.example.javafxemailclient.view to javafx.fxml;
     exports com.example.javafxemailclient.controller;
     opens com.example.javafxemailclient.controller to javafx.fxml;
+    opens com.example.javafxemailclient.model;
 
 
 }
