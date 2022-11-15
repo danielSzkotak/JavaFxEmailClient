@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95ea60f1-e4ba-40c9-8499-45244b1bcfd4" name="Changes" comment="setup Scene Builder">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/controller/services/MessageRendererService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/controller/services/FolderUpdaterService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/controller/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/controller/MainWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/EmailManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/EmailManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/controller/services/FetchFolderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/controller/services/FetchFolderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/model/EmailTreeItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafxemailclient/model/EmailTreeItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
