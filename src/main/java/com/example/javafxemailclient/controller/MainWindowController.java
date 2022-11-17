@@ -58,10 +58,16 @@ public class MainWindowController extends BaseController implements Initializabl
         viewFactory.showOptionsWindow();
     }
 
+
     @FXML
     void addAccountAction() {
         viewFactory.showLoginWindow();
 
+    }
+
+    @FXML
+    void composeMessageAction() {
+        viewFactory.showComposeMessageWindow();
     }
 
     @Override
