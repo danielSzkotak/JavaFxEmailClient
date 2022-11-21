@@ -23,12 +23,14 @@ public class ViewFactory {
     }
 
     public boolean isMainViewInitialized(){
+
         return mainViewInitialized;
     }
 
 
     //View options handling
-    private ColorTheme colorTheme = ColorTheme.DARK;
+    private ColorTheme colorTheme = ColorTheme.DEFAULT;
+    private FontSize fontSize = FontSize.SMALL;
 
     public ColorTheme getColorTheme() {
         return colorTheme;
@@ -46,20 +48,14 @@ public class ViewFactory {
         this.fontSize = fontSize;
     }
 
-    private FontSize fontSize = FontSize.MEDIUM;
-
 
     public void showLoginWindow(){
-        System.out.println("show login window");
-
         BaseController controller = new LoginWindowController(emailManager, this, "LoginWindow.fxml");
         initializeStage(controller);
 
     }
 
     public void showMainWindow(){
-        System.out.println("Main Window called!");
-
         BaseController controller = new MainWindowController(emailManager, this, "MainWindow.fxml");
         initializeStage(controller);
         mainViewInitialized = true;
@@ -67,13 +63,11 @@ public class ViewFactory {
     }
 
     public void showOptionsWindow(){
-        System.out.println("Options Window called!!!");
         BaseController controller = new OptionsWindowController(emailManager, this, "OptionsWindow.fxml");
         initializeStage(controller);
     }
 
     public void showComposeMessageWindow(){
-        System.out.println("Compose Window called!!!");
         BaseController controller = new ComposeMessageControler(emailManager, this, "ComposeMessageWindow.fxml");
         initializeStage(controller);
     }
@@ -91,7 +85,8 @@ public class ViewFactory {
         }
 
         Scene scene = new Scene(parent);
-        Stage stage =new Stage();
+        updateStyle(scene);
+        Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
         activeStages.add(stage);
@@ -103,13 +98,16 @@ public class ViewFactory {
     }
 
 
-    public void updateStyles() {
-        for (Stage stage: activeStages){
+    public void updateAllStyles() {
+        for (Stage stage: activeStages) {
             Scene scene = stage.getScene();
-            //handle the CSS
-            scene.getStylesheets().clear();
-            scene.getStylesheets().add(getClass().getResource(ColorTheme.getCssPath(colorTheme)).toExternalForm());
-            scene.getStylesheets().add(getClass().getResource(FontSize.getCssPath(fontSize)).toExternalForm());
+            updateStyle(scene);
         }
+    }
+
+    private void updateStyle(Scene scene){
+        scene.getStylesheets().clear();
+        scene.getStylesheets().add(getClass().getResource(ColorTheme.getCssPath(colorTheme)).toExternalForm());
+        scene.getStylesheets().add(getClass().getResource(FontSize.getCssPath(fontSize)).toExternalForm());
     }
 }

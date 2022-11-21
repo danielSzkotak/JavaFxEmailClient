@@ -6,13 +6,13 @@
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="337.0" prefWidth="462.0" styleClass="big" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="337.0" prefWidth="462.0" styleClass="container" xmlns="http://javafx.com/javafx/18.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Slider fx:id="fontSizePicker" layoutX="133.0" layoutY="129.0" prefHeight="27.0" prefWidth="247.0" />
       <ChoiceBox fx:id="themePicker" layoutX="133.0" layoutY="175.0" prefHeight="33.0" prefWidth="247.0" />
       <Label layoutX="28.0" layoutY="134.0" prefHeight="17.0" prefWidth="81.0" text="Font size" />
       <Label layoutX="28.0" layoutY="183.0" prefHeight="17.0" prefWidth="81.0" text="Color theme" />
-      <Label layoutX="197.0" layoutY="46.0" prefHeight="17.0" prefWidth="50.0" text="Options" />
+      <Label layoutX="160.0" layoutY="46.0" styleClass="big" prefHeight="17.0" prefWidth="144.0" text="Options"/>
       <Button layoutX="299.0" layoutY="277.0" mnemonicParsing="false" onAction="#applyButtonAction" prefHeight="17.0" prefWidth="81.0" text="Apply" />
       <Button layoutX="191.0" layoutY="277.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="25.0" prefWidth="81.0" text="Cancel" />
    </children>
