@@ -31,8 +31,6 @@ public class LoginWindowController extends BaseController implements Initializab
     @FXML
     void loginButtonAction() {
 
-        System.out.println("loginButtonAction!");
-
         if (fieldsAreValid()){
             EmailAccount emailAccount = new EmailAccount(emailField.getText(), passwordField.getText());
             LoginService loginService = new LoginService(emailAccount, emailManager);
@@ -43,7 +41,7 @@ public class LoginWindowController extends BaseController implements Initializab
 
                 switch (emailLoginResult){
                     case SUCCESS:
-                        System.out.println("login succesfull !!!" + emailAccount);
+
                         if (!viewFactory.isMainViewInitialized()){
                             viewFactory.showMainWindow();
                         }

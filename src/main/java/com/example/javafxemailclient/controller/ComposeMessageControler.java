@@ -47,16 +47,16 @@ public class ComposeMessageControler  extends BaseController implements Initiali
         emailSenderService.setOnSucceeded(workerStateEvent -> {
             EmailSendingResult emailSendingResult = emailSenderService.getValue();
             switch (emailSendingResult) {
-                case SUCCESS -> {
+                case SUCCESS : {
                     //Jak zamknąć okno
                     //pobieramy scenę z byle jakiego pola i zamykamy
                     Stage stage = (Stage) recipientTextField.getScene().getWindow();
                     viewFactory.closeStage(stage);
                 }
-                case FAILED_BY_PROVIDER -> {
+                case FAILED_BY_PROVIDER : {
                     errorLabel.setText("Provider error!");
                 }
-                case FAILED_BY_UNEXPECTED_EROOR -> {
+                case FAILED_BY_UNEXPECTED_EROOR : {
                     errorLabel.setText("Unexpected error!");
                 }
             }
