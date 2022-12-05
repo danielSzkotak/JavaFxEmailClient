@@ -34,6 +34,10 @@ public class EmailMessage {
         this.message = message;
     }
 
+    public boolean hasAttachments(){
+        return hasAttachment;
+    }
+
     public String getSubject(){
         return this.subject.get();
     }
@@ -65,9 +69,14 @@ public class EmailMessage {
         return this.message;
     }
 
+    public List<MimeBodyPart> getAttachmentList(){
+        return attachmentList;
+    }
+
     public void addAttachment(MimeBodyPart mimeBodyPart) throws MessagingException {
         hasAttachment = true;
         attachmentList.add(mimeBodyPart);
+
         System.out.println("Adde attachment: " + mimeBodyPart.getFileName());
     }
 }
