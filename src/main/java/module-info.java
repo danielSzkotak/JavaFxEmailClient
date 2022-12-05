@@ -4,6 +4,7 @@ module com.example.javafxemailclient {
     requires javafx.web;
     requires activation;
     requires java.mail;
+    requires java.desktop;
 
     //requires org.kordamp.bootstrapfx.core;
 
