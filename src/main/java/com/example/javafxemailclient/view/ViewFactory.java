@@ -51,33 +51,38 @@ public class ViewFactory {
 
     public void showLoginWindow(){
         BaseController controller = new LoginWindowController(emailManager, this, "LoginWindow.fxml");
-        initializeStage(controller);
+        initializeStage(controller, true);
 
     }
 
     public void showMainWindow(){
         BaseController controller = new MainWindowController(emailManager, this, "MainWindow.fxml");
-        initializeStage(controller);
+        initializeStage(controller, true);
         mainViewInitialized = true;
 
     }
 
     public void showOptionsWindow(){
         BaseController controller = new OptionsWindowController(emailManager, this, "OptionsWindow.fxml");
-        initializeStage(controller);
+        initializeStage(controller, true);
     }
 
     public void showComposeMessageWindow(){
         BaseController controller = new ComposeMessageControler(emailManager, this, "ComposeMessageWindow.fxml");
-        initializeStage(controller);
+        initializeStage(controller, true);
     }
 
     public void showEmailDetailsWindow(){
         BaseController controller = new EmailDetailsController(emailManager, this, "EmailDetailWindow.fxml");
-        initializeStage(controller);
+        initializeStage(controller, true);
     }
 
-    private void initializeStage(BaseController baseController){
+    public void showAboutWindow(){
+        BaseController controller = new AboutWindowController(emailManager, this, "AboutWindow.fxml");
+        initializeStage(controller, false);
+    }
+
+    private void initializeStage(BaseController baseController, boolean isResizeable){
         FXMLLoader fxmlLoader  = new FXMLLoader(getClass().getResource(baseController.getFxmlName()));
         fxmlLoader.setController(baseController);
 
@@ -93,13 +98,23 @@ public class ViewFactory {
         updateStyle(scene);
         Stage stage = new Stage();
         stage.setScene(scene);
+        if (!isResizeable) {
+            stage.setResizable(false);
+        }
+
         stage.show();
         activeStages.add(stage);
     }
 
+
+
     public void closeStage(Stage stageToCLose){
         stageToCLose.close();
         activeStages.remove(stageToCLose);
+    }
+
+    public void disableResize(Stage stage){
+        stage.setResizable(false);
     }
 
 
