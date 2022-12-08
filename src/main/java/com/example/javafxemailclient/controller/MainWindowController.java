@@ -73,6 +73,14 @@ public class MainWindowController extends BaseController implements Initializabl
         viewFactory.showComposeMessageWindow();
     }
 
+    @FXML
+    void showAboutAction() {
+        viewFactory.showAboutWindow();
+    }
+
+
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setUpEmailsTreeView();

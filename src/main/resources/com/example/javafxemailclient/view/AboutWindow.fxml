@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/18.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="79.0" layoutY="37.0" prefHeight="17.0" prefWidth="228.0" text="JavaFX Email Client Version 1.0.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="aboutTextArea" layoutX="79.0" layoutY="79.0" prefHeight="117.0" prefWidth="237.0" text="This software is designed for educational &#10;purposes. It is a fully functional email &#10;client. The application together with the &#10;source code can be freely shared &#10;and used without the consent of the &#10;author." />
+      <Label layoutX="79.0" layoutY="211.0" text="e-mail: daniel.szkotak@gmail.com" />
+      <Button fx:id="exitBtn" layoutX="264.0" layoutY="258.0" mnemonicParsing="false" onAction="#exitAboutBtnAction" prefHeight="25.0" prefWidth="54.0" text="OK" />
+   </children>
+</AnchorPane>
