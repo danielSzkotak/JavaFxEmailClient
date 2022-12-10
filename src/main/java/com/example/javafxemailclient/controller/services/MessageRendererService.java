@@ -79,6 +79,8 @@ public class MessageRendererService  extends Service {
                 emailMessage.addAttachment(mimeBodyPart);
             }
         }
+        emailMessage.setHasAttachment(true);
+
     }
 
     private boolean isSimpleType(String contentType){

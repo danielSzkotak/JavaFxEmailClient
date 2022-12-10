@@ -59,7 +59,6 @@ public class EmailDetailsController extends BaseController implements Initializa
     private void loadAttachments(EmailMessage emailMessage)  {
         if (emailMessage.hasAttachments()){
             for (MimeBodyPart mimeBodyPart: emailMessage.getAttachmentList()){
-                System.out.println("zalacznik");
                 try {
                     AttachmentButton button = new AttachmentButton(mimeBodyPart);
                     hBoxDownloads.getChildren().add(button);

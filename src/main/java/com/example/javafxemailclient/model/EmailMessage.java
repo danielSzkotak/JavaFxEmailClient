@@ -38,6 +38,10 @@ public class EmailMessage {
         return hasAttachment;
     }
 
+    public void setHasAttachment(boolean hasAttachment) {
+        this.hasAttachment = hasAttachment;
+    }
+
     public String getSubject(){
         return this.subject.get();
     }
@@ -74,9 +78,9 @@ public class EmailMessage {
     }
 
     public void addAttachment(MimeBodyPart mimeBodyPart) throws MessagingException {
-        hasAttachment = true;
-        attachmentList.add(mimeBodyPart);
 
-        System.out.println("Adde attachment: " + mimeBodyPart.getFileName());
+        if (hasAttachment == false){
+            attachmentList.add(mimeBodyPart);
+        }
     }
 }

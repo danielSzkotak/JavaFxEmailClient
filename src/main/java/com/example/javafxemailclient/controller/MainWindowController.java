@@ -6,6 +6,7 @@ import com.example.javafxemailclient.model.EmailMessage;
 import com.example.javafxemailclient.model.EmailTreeItem;
 import com.example.javafxemailclient.model.SizeInteger;
 import com.example.javafxemailclient.view.ViewFactory;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -77,6 +78,12 @@ public class MainWindowController extends BaseController implements Initializabl
     void showAboutAction() {
         viewFactory.showAboutWindow();
     }
+
+    @FXML
+    void closeAppBtnAction() {
+        Platform.exit();
+    }
+
 
 
 
