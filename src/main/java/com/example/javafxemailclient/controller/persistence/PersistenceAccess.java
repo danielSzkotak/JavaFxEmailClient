@@ -17,9 +17,13 @@ public class PersistenceAccess {
             List<VaildAccount> persistedList = (List<VaildAccount>) objectInputStream.readObject();
             decodePassword(persistedList);
             resultList.addAll(persistedList);
+        } catch (FileNotFoundException e){
+
         } catch (Exception e){
             e.printStackTrace();
         }
+
+
         return resultList;
     }
 

@@ -51,7 +51,7 @@ public class ViewFactory {
 
     public void showLoginWindow(){
         BaseController controller = new LoginWindowController(emailManager, this, "LoginWindow.fxml");
-        initializeStage(controller, true);
+        initializeStage(controller, false);
 
     }
 
@@ -64,7 +64,7 @@ public class ViewFactory {
 
     public void showOptionsWindow(){
         BaseController controller = new OptionsWindowController(emailManager, this, "OptionsWindow.fxml");
-        initializeStage(controller, true);
+        initializeStage(controller, false);
     }
 
     public void showComposeMessageWindow(){
