@@ -6,6 +6,7 @@ import com.example.javafxemailclient.model.EmailMessage;
 import com.example.javafxemailclient.model.EmailTreeItem;
 import com.example.javafxemailclient.model.SizeInteger;
 import com.example.javafxemailclient.view.ViewFactory;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -78,6 +79,12 @@ public class MainWindowController extends BaseController implements Initializabl
         viewFactory.showAboutWindow();
     }
 
+    @FXML
+    void closeAppBtnAction() {
+        Platform.exit();
+    }
+
+
 
 
 
@@ -91,9 +98,11 @@ public class MainWindowController extends BaseController implements Initializabl
         setUpMessageSelection();
         setUpContextMenus();
 
+
     }
 
     private void setUpContextMenus() {
+
         markUnreadMenuItem.setOnAction(actionEvent -> {
             emailManager.setUnread();
         });
@@ -109,18 +118,28 @@ public class MainWindowController extends BaseController implements Initializabl
 
     private void setUpMessageSelection() {
         emailsTableView.setOnMouseClicked(event -> {
-            EmailMessage emailMessage = emailsTableView.getSelectionModel().getSelectedItem();
-            if (emailMessage != null){
-                emailManager.setSelectedMessage(emailMessage);
-                if (!emailMessage.isRead()){
-                    emailManager.setRead();
+            if (event.getClickCount() == 2)
+            {
+                EmailMessage emailMessage = emailsTableView.getSelectionModel().getSelectedItem();
+                if (emailMessage != null) {
+                    messageRendererService.setEmailMessage(emailMessage);
+                    viewFactory.showEmailDetailsWindow();
                 }
-                emailManager.setSelectedMessage(emailMessage);
-                messageRendererService.setEmailMessage(emailMessage);
-                messageRendererService.restart();
+            } else {
+                EmailMessage emailMessage = emailsTableView.getSelectionModel().getSelectedItem();
+                if (emailMessage != null) {
+                    emailManager.setSelectedMessage(emailMessage);
+                    if (!emailMessage.isRead()) {
+                        emailManager.setRead();
+                    }
+                    emailManager.setSelectedMessage(emailMessage);
+                    messageRendererService.setEmailMessage(emailMessage);
+                    messageRendererService.restart();
+                }
             }
         });
     }
+
 
     private void setUpMessageRenderService() {
         messageRendererService = new MessageRendererService(emailWebView.getEngine());

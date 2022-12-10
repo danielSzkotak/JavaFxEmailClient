@@ -4,6 +4,7 @@ import javafx.concurrent.Service;
 import javafx.concurrent.Task;
 
 import javax.mail.Folder;
+import java.util.ConcurrentModificationException;
 import java.util.List;
 
 public class FolderUpdaterService extends Service {
@@ -28,6 +29,8 @@ public class FolderUpdaterService extends Service {
                                 folder.getMessageCount();
                             }
                         }
+                    }catch (ConcurrentModificationException e) {
+
                     }catch (Exception e) {
                         e.printStackTrace();
                     }
