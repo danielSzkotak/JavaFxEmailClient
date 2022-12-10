@@ -1,0 +1,2 @@
+# JavaFxEmailClient
+JavaFX Email Client
