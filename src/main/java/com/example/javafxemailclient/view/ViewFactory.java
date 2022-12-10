@@ -5,6 +5,7 @@ import com.example.javafxemailclient.controller.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -51,38 +52,38 @@ public class ViewFactory {
 
     public void showLoginWindow(){
         BaseController controller = new LoginWindowController(emailManager, this, "LoginWindow.fxml");
-        initializeStage(controller, false);
+        initializeStage(controller, false, "Login");
 
     }
 
     public void showMainWindow(){
         BaseController controller = new MainWindowController(emailManager, this, "MainWindow.fxml");
-        initializeStage(controller, true);
+        initializeStage(controller, true, "JavaFX Email Client");
         mainViewInitialized = true;
 
     }
 
     public void showOptionsWindow(){
         BaseController controller = new OptionsWindowController(emailManager, this, "OptionsWindow.fxml");
-        initializeStage(controller, false);
+        initializeStage(controller, false, "Options");
     }
 
     public void showComposeMessageWindow(){
         BaseController controller = new ComposeMessageControler(emailManager, this, "ComposeMessageWindow.fxml");
-        initializeStage(controller, true);
+        initializeStage(controller, true, "New Message");
     }
 
     public void showEmailDetailsWindow(){
         BaseController controller = new EmailDetailsController(emailManager, this, "EmailDetailWindow.fxml");
-        initializeStage(controller, true);
+        initializeStage(controller, true, "Email message");
     }
 
     public void showAboutWindow(){
         BaseController controller = new AboutWindowController(emailManager, this, "AboutWindow.fxml");
-        initializeStage(controller, false);
+        initializeStage(controller, false, "About");
     }
 
-    private void initializeStage(BaseController baseController, boolean isResizeable){
+    private void initializeStage(BaseController baseController, boolean isResizeable, String title){
         FXMLLoader fxmlLoader  = new FXMLLoader(getClass().getResource(baseController.getFxmlName()));
         fxmlLoader.setController(baseController);
 
@@ -97,6 +98,8 @@ public class ViewFactory {
         Scene scene = new Scene(parent);
         updateStyle(scene);
         Stage stage = new Stage();
+        stage.setTitle(title);
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("icons/icon_title.png")));
         stage.setScene(scene);
         if (!isResizeable) {
             stage.setResizable(false);
